@@ -1,4 +1,4 @@
-
+/* // Multiple tiers with descriptions
 const section_id = [
   { name: "Premium", seat_color_id: "gold" },
   { name: "Standard", seat_color_id: "red" }
@@ -22,14 +22,145 @@ const tier_id = [
     }
   }
 ];
+*/
+
+ /* // Multiple tiers without descriptions
+const section_id = [
+  { name: "Premium", seat_color_id: "gold" },
+  { name: "Standard", seat_color_id: "red" }
+];
+
+const tier_id = [
+  {
+    name: "Adult",
+    prices: {
+      Premium: "$40",
+      Standard: "$30"
+    }
+  },
+  {
+    name: "Senior",
+    prices: {
+      Premium: "$35",
+      Standard: "$25"
+    }
+  }
+];
+*/
+
+//  // Single tier with descriptions
+// const section_id = [
+//   { name: "Standard", seat_color_id: "red" }
+// ];
+
+// const tier_id = [
+//   {
+//     name: "Adult",
+//     description: "Ages 19 and Older",
+//     prices: {
+//       "Standard": "$22 + Fee"
+//     }
+//   },
+//   {
+//     name: "Child",
+//     description: "Ages 3 to 18",
+//     prices: {
+//       "Standard": "$15 + Fee"
+//     }
+//   }
+// ];
+
+ // Single tier with descriptions
+// ...existing code...
+const section_id = [
+  { name: "Orchestra", seat_color_id: "blue" },
+  { name: "Mezzanine", seat_color_id: "green" },
+  { name: "Balcony", seat_color_id: "purple" },
+  { name: "Box", seat_color_id: "orange" },
+  { name: "Gallery", seat_color_id: "yellow" }
+];
+
+const tier_id = [
+  {
+    name: "Adult",
+    prices: {
+      Orchestra: "$50",
+      Mezzanine: "$40",
+      Balcony: "$30",
+      Box: "$60",
+      Gallery: "$25"
+    }
+  },
+  {
+    name: "Senior",
+    prices: {
+      Orchestra: "$45",
+      Mezzanine: "$35",
+      Balcony: "$25",
+      Box: "$55",
+      Gallery: "$20"
+    }
+  },
+  {
+    name: "Student",
+    prices: {
+      Orchestra: "$40",
+      Mezzanine: "$30",
+      Balcony: "$20",
+      Box: "$50",
+      Gallery: "$15"
+    }
+  },
+  {
+    name: "Child",
+    prices: {
+      Orchestra: "$35",
+      Mezzanine: "$25",
+      Balcony: "$15",
+      Box: "$45",
+      Gallery: "$10"
+    }
+  },
+  {
+    name: "Military",
+    prices: {
+      Orchestra: "$42",
+      Mezzanine: "$32",
+      Balcony: "$22",
+      Box: "$52",
+      Gallery: "$18"
+    }
+  }
+];
+
+//  // Single tier without descriptions
+// const section_id = [
+//   { name: "Standard", seat_color_id: "red" }
+// ];
+
+// const tier_id = [
+//   {
+//     name: "Adult",
+//     prices: {
+//       Standard: "$18"
+//     }
+//   },
+//   {
+//     name: "Senior",
+//     prices: {
+//       Standard: "$15"
+//     }
+//   }
+// ];
 
 
 
 function generateLegend(section_id, tier_id) {
-// Determine if any ticket has a description
+
+// Determine if any ticket type has a description
 const hasDescriptions = tier_id.some(ticket => ticket.description);
 
-// Base column count = tier columns + 1 ("Type") + 1 (if descriptions)
+// # of columns = tier columns + 1 ("Type") + 1 (if there are descriptions)
 let totalColumns = section_id.length + 1;
 if (hasDescriptions) totalColumns += 1;
 
@@ -87,11 +218,11 @@ for (const ticket of tier_id) {
   typeSpan.textContent = ticket.name;
   row.appendChild(typeSpan);
 
-  // Add Description if applicable
+  // Add description if applicable
   if (hasDescriptions) {
     const descSpan = document.createElement('span');
     descSpan.style.width = columnWidth;
-    descSpan.textContent = ticket.description || "—";
+    descSpan.textContent = ticket.description || "—"; // Uses "—" if no description
     row.appendChild(descSpan);
   }
 
