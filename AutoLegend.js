@@ -1,33 +1,77 @@
-const tiers = [
-  { name: 'Adult', description: 'Ages 19 and Older', price: '$25 + Fee' },
-  { name: 'Child', description: 'Ages 3 to 18', price: '$20 + Fee' }
+const section_id = [
+  { name: "Premium", seat_color_id: "gold" },
+  { name: "Standard", seat_color_id: "red" }
 ];
 
-const legendWrapper = document.createElement('div');
-legendWrapper.className = 'alternating';
+const tier_id = [
+  {
+    name: "Adult",
+    prices: {
+      Premium: "$25 + Fee + Tax",
+      Standard: "$20 + Fee + Tax"
+    }
+  },
+  {
+    name: "Child",
+    prices: {
+      Premium: "$20 + Fee + Tax",
+      Standard: "$18 + Fee + Tax"
+    }
+  },
+  {
+    name: "Senior",
+    prices: {
+      Premium: "$20 + Fee + Tax",
+      Standard: "$18 + Fee + Tax"
+    }
+  }
+];
 
-// Loop through the tier data and build the legend
-for (const tier of tiers) {
-  const tierRow = document.createElement('div');
-  tierRow.setAttribute('rel', 'body');
 
-  const nameSpan = document.createElement('span');
-  nameSpan.style.width = '34%';
-  nameSpan.textContent = tier.name;
+let totalColumns;
 
-  const descSpan = document.createElement('span');
-  descSpan.style.width = '34%';
-  descSpan.textContent = tier.description;
-
-  const priceSpan = document.createElement('span');
-  priceSpan.style.width = '34%';
-  priceSpan.textContent = tier.price;
-
-  tierRow.appendChild(nameSpan);
-  tierRow.appendChild(descSpan);
-  tierRow.appendChild(priceSpan);
-
-  legendWrapper.appendChild(tierRow);
+if (!tier_id || tier_id.length === 0) {
+  totalColumns = section_id.length;
+} else {
+  totalColumns = section_id.length + 2;
 }
 
-document.getElementById('legend_id').appendChild(legendWrapper);
+const columnWidth = (100 / totalColumns) + "%";
+
+const legendEl = document.createElement('div');
+legendEl.id = 'auto_legend';
+
+const headerRow = document.createElement('div');
+headerRow.setAttribute('rel', 'head');
+headerRow.className = 'chairs';
+
+for (const tier of section_id) {
+  const tierHeader = document.createElement('span');
+  tierHeader.style.width = columnWidth;
+  tierHeader.setAttribute(tier.seat_color_id, ""); // adds attribute like gold or red
+  tierHeader.textContent = tier.name;
+  headerRow.appendChild(tierHeader);
+}
+
+legendEl.appendChild(headerRow);
+
+const bodyContainer = document.createElement('div');
+bodyContainer.className = 'alternating';
+
+for (const ticket of tier_id) {
+  const row = document.createElement('div');
+  row.setAttribute('rel', 'body');
+
+  for (const tier of section_id) {
+    const priceSpan = document.createElement('span');
+    priceSpan.style.width = columnWidth;
+    priceSpan.textContent = ticket.prices[tier.name];
+    row.appendChild(priceSpan);
+  }
+
+  bodyContainer.appendChild(row);
+}
+
+legendEl.appendChild(bodyContainer);
+
+document.getElementById('div-legend').appendChild(legendEl);
