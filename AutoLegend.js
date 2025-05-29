@@ -71,7 +71,6 @@ const tier_id = [
 // ];
 
  // Single tier with descriptions
-// ...existing code...
 const section_id = [
   { name: "Orchestra", seat_color_id: "blue" },
   { name: "Mezzanine", seat_color_id: "green" },
