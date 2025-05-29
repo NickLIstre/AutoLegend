@@ -1,4 +1,4 @@
-/* // Multiple tiers with descriptions
+ // Multiple tiers with descriptions
 const section_id = [
   { name: "Premium", seat_color_id: "gold" },
   { name: "Standard", seat_color_id: "red" }
@@ -22,31 +22,31 @@ const tier_id = [
     }
   }
 ];
-*/
 
- /* // Multiple tiers without descriptions
-const section_id = [
-  { name: "Premium", seat_color_id: "gold" },
-  { name: "Standard", seat_color_id: "red" }
-];
 
-const tier_id = [
-  {
-    name: "Adult",
-    prices: {
-      Premium: "$40",
-      Standard: "$30"
-    }
-  },
-  {
-    name: "Senior",
-    prices: {
-      Premium: "$35",
-      Standard: "$25"
-    }
-  }
-];
-*/
+//  // Multiple tiers without descriptions
+// const section_id = [
+//   { name: "Premium", seat_color_id: "gold" },
+//   { name: "Standard", seat_color_id: "red" }
+// ];
+
+// const tier_id = [
+//   {
+//     name: "Adult",
+//     prices: {
+//       Premium: "$40",
+//       Standard: "$30"
+//     }
+//   },
+//   {
+//     name: "Senior",
+//     prices: {
+//       Premium: "$35",
+//       Standard: "$25"
+//     }
+//   }
+// ];
+
 
 //  // Single tier with descriptions
 // const section_id = [
@@ -70,67 +70,67 @@ const tier_id = [
 //   }
 // ];
 
- // Single tier with descriptions
-const section_id = [
-  { name: "Orchestra", seat_color_id: "blue" },
-  { name: "Mezzanine", seat_color_id: "green" },
-  { name: "Balcony", seat_color_id: "purple" },
-  { name: "Box", seat_color_id: "orange" },
-  { name: "Gallery", seat_color_id: "yellow" }
-];
+//  // 5 tiers with 5 types
+// const section_id = [
+//   { name: "Orchestra", seat_color_id: "gold" },
+//   { name: "Mezzanine", seat_color_id: "orange" },
+//   { name: "Balcony", seat_color_id: "yellow" },
+//   { name: "Box", seat_color_id: "green" },
+//   { name: "Gallery", seat_color_id: "red" }
+// ];
 
-const tier_id = [
-  {
-    name: "Adult",
-    prices: {
-      Orchestra: "$50",
-      Mezzanine: "$40",
-      Balcony: "$30",
-      Box: "$60",
-      Gallery: "$25"
-    }
-  },
-  {
-    name: "Senior",
-    prices: {
-      Orchestra: "$45",
-      Mezzanine: "$35",
-      Balcony: "$25",
-      Box: "$55",
-      Gallery: "$20"
-    }
-  },
-  {
-    name: "Student",
-    prices: {
-      Orchestra: "$40",
-      Mezzanine: "$30",
-      Balcony: "$20",
-      Box: "$50",
-      Gallery: "$15"
-    }
-  },
-  {
-    name: "Child",
-    prices: {
-      Orchestra: "$35",
-      Mezzanine: "$25",
-      Balcony: "$15",
-      Box: "$45",
-      Gallery: "$10"
-    }
-  },
-  {
-    name: "Military",
-    prices: {
-      Orchestra: "$42",
-      Mezzanine: "$32",
-      Balcony: "$22",
-      Box: "$52",
-      Gallery: "$18"
-    }
-  }
-];
+// const tier_id = [
+//   {
+//     name: "Adult",
+//     prices: {
+//       Orchestra: "$50",
+//       Mezzanine: "$40",
+//       Balcony: "$30",
+//       Box: "$60",
+//       Gallery: "$25"
+//     }
+//   },
+//   {
+//     name: "Senior",
+//     prices: {
+//       Orchestra: "$45",
+//       Mezzanine: "$35",
+//       Balcony: "$25",
+//       Box: "$55",
+//       Gallery: "$20"
+//     }
+//   },
+//   {
+//     name: "Student",
+//     prices: {
+//       Orchestra: "$40",
+//       Mezzanine: "$30",
+//       Balcony: "$20",
+//       Box: "$50",
+//       Gallery: "$15"
+//     }
+//   },
+//   {
+//     name: "Child",
+//     prices: {
+//       Orchestra: "$35",
+//       Mezzanine: "$25",
+//       Balcony: "$15",
+//       Box: "$45",
+//       Gallery: "$10"
+//     }
+//   },
+//   {
+//     name: "Military",
+//     prices: {
+//       Orchestra: "$42",
+//       Mezzanine: "$32",
+//       Balcony: "$22",
+//       Box: "$52",
+//       Gallery: "$18"
+//     }
+//   }
+// ];
 
 //  // Single tier without descriptions
 // const section_id = [
