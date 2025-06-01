@@ -1,149 +1,149 @@
 
-// // Five tiers, 1 Type, no descriptions, Total, no tax)
-//  const  include_service_charge_on_ticket = 0;
-//  const sales_tax_id = 1; // Assuming no sales tax for this example
-// const data = [
-//   {
-//     "price": 26,
-//     "door_price": null,
-//     "admin_user_id": 91,
-//     "is_default": 1,
-//     "date_start": null,
-//     "date_end": null,
-//     "date_door_pricing_start": null,
-//     "max_capacity": null,
-//     "is_hc": 0,
-//     "ticket_graphic_image_id": null,
-//     "ticket_color": null,
-//     "ticket_corner": null,
-//     "seat_low": null,
-//     "seat_high": null,
-//     "id": 32861,
-//     "show_id": 47204,
-//     "name": "Tier 1",
-//     "is_ada_seating": 0,
-//     "priority_required": 0,
-//     "is_general_seating": 0,
-//     "ga_capacity": null,
-//     "max_order_seats": null,
-//     "seat_color_id": 1,
-//     "ticket_graphic_image_id_2": 3,
-//     "ticket_color_2": null,
-//     "ticket_corner_2": null
-//   },
-//   {
-//     "price": 24,
-//     "door_price": null,
-//     "admin_user_id": 91,
-//     "is_default": 1,
-//     "date_start": null,
-//     "date_end": null,
-//     "date_door_pricing_start": null,
-//     "max_capacity": null,
-//     "is_hc": 0,
-//     "ticket_graphic_image_id": null,
-//     "ticket_color": null,
-//     "ticket_corner": null,
-//     "seat_low": null,
-//     "seat_high": null,
-//     "id": 32862,
-//     "show_id": 47204,
-//     "name": "Tier 2",
-//     "is_ada_seating": 0,
-//     "priority_required": null,
-//     "is_general_seating": 0,
-//     "ga_capacity": null,
-//     "max_order_seats": null,
-//     "seat_color_id": 0,
-//     "ticket_graphic_image_id_2": 4,
-//     "ticket_color_2": null,
-//     "ticket_corner_2": null
-//   },
-//   {
-//     "price": 22,
-//     "door_price": null,
-//     "admin_user_id": 91,
-//     "is_default": 1,
-//     "date_start": null,
-//     "date_end": null,
-//     "date_door_pricing_start": null,
-//     "max_capacity": null,
-//     "is_hc": 0,
-//     "ticket_graphic_image_id": null,
-//     "ticket_color": null,
-//     "ticket_corner": null,
-//     "seat_low": null,
-//     "seat_high": null,
-//     "id": 32863,
-//     "show_id": 47204,
-//     "name": "Tier 3",
-//     "is_ada_seating": 0,
-//     "priority_required": null,
-//     "is_general_seating": 0,
-//     "ga_capacity": null,
-//     "max_order_seats": null,
-//     "seat_color_id": 0,
-//     "ticket_graphic_image_id_2": 0,
-//     "ticket_color_2": null,
-//     "ticket_corner_2": null
-//   },
-//   {
-//     "price": 20,
-//     "door_price": null,
-//     "admin_user_id": 91,
-//     "is_default": 1,
-//     "date_start": null,
-//     "date_end": null,
-//     "date_door_pricing_start": null,
-//     "max_capacity": null,
-//     "is_hc": 0,
-//     "ticket_graphic_image_id": null,
-//     "ticket_color": null,
-//     "ticket_corner": null,
-//     "seat_low": null,
-//     "seat_high": null,
-//     "id": 32864,
-//     "show_id": 47204,
-//     "name": "Tier 4",
-//     "is_ada_seating": 0,
-//     "priority_required": null,
-//     "is_general_seating": 0,
-//     "ga_capacity": null,
-//     "max_order_seats": null,
-//     "seat_color_id": 0,
-//     "ticket_graphic_image_id_2": 7,
-//     "ticket_color_2": null,
-//     "ticket_corner_2": null
-//   },
-//   {
-//     "price": 18,
-//     "door_price": null,
-//     "admin_user_id": 91,
-//     "is_default": 1,
-//     "date_start": null,
-//     "date_end": null,
-//     "date_door_pricing_start": null,
-//     "max_capacity": null,
-//     "is_hc": 0,
-//     "ticket_graphic_image_id": null,
-//     "ticket_color": null,
-//     "ticket_corner": null,
-//     "seat_low": null,
-//     "seat_high": null,
-//     "id": 32865,
-//     "show_id": 47204,
-//     "name": "Tier 5",
-//     "is_ada_seating": 0,
-//     "priority_required": null,
-//     "is_general_seating": 0,
-//     "ga_capacity": null,
-//     "max_order_seats": null,
-//     "seat_color_id": 0,
-//     "ticket_graphic_image_id_2": 8,
-//     "ticket_color_2": null,
-//     "ticket_corner_2": null
-//   }
-// ]
+// Five tiers, 1 Type, no descriptions, Total, no tax)
+ const  include_service_charge_on_ticket = 0;
+ const sales_tax_id = 1; // Assuming no sales tax for this example
+const data = [
+  {
+    "price": 26,
+    "door_price": null,
+    "admin_user_id": 91,
+    "is_default": 1,
+    "date_start": null,
+    "date_end": null,
+    "date_door_pricing_start": null,
+    "max_capacity": null,
+    "is_hc": 0,
+    "ticket_graphic_image_id": null,
+    "ticket_color": null,
+    "ticket_corner": null,
+    "seat_low": null,
+    "seat_high": null,
+    "id": 32861,
+    "show_id": 47204,
+    "name": "Tier 1",
+    "is_ada_seating": 0,
+    "priority_required": 0,
+    "is_general_seating": 0,
+    "ga_capacity": null,
+    "max_order_seats": null,
+    "seat_color_id": 1,
+    "ticket_graphic_image_id_2": 3,
+    "ticket_color_2": null,
+    "ticket_corner_2": null
+  },
+  {
+    "price": 24,
+    "door_price": null,
+    "admin_user_id": 91,
+    "is_default": 1,
+    "date_start": null,
+    "date_end": null,
+    "date_door_pricing_start": null,
+    "max_capacity": null,
+    "is_hc": 0,
+    "ticket_graphic_image_id": null,
+    "ticket_color": null,
+    "ticket_corner": null,
+    "seat_low": null,
+    "seat_high": null,
+    "id": 32862,
+    "show_id": 47204,
+    "name": "Tier 2",
+    "is_ada_seating": 0,
+    "priority_required": null,
+    "is_general_seating": 0,
+    "ga_capacity": null,
+    "max_order_seats": null,
+    "seat_color_id": 0,
+    "ticket_graphic_image_id_2": 4,
+    "ticket_color_2": null,
+    "ticket_corner_2": null
+  },
+  {
+    "price": 22,
+    "door_price": null,
+    "admin_user_id": 91,
+    "is_default": 1,
+    "date_start": null,
+    "date_end": null,
+    "date_door_pricing_start": null,
+    "max_capacity": null,
+    "is_hc": 0,
+    "ticket_graphic_image_id": null,
+    "ticket_color": null,
+    "ticket_corner": null,
+    "seat_low": null,
+    "seat_high": null,
+    "id": 32863,
+    "show_id": 47204,
+    "name": "Tier 3",
+    "is_ada_seating": 0,
+    "priority_required": null,
+    "is_general_seating": 0,
+    "ga_capacity": null,
+    "max_order_seats": null,
+    "seat_color_id": 0,
+    "ticket_graphic_image_id_2": 0,
+    "ticket_color_2": null,
+    "ticket_corner_2": null
+  },
+  {
+    "price": 20,
+    "door_price": null,
+    "admin_user_id": 91,
+    "is_default": 1,
+    "date_start": null,
+    "date_end": null,
+    "date_door_pricing_start": null,
+    "max_capacity": null,
+    "is_hc": 0,
+    "ticket_graphic_image_id": null,
+    "ticket_color": null,
+    "ticket_corner": null,
+    "seat_low": null,
+    "seat_high": null,
+    "id": 32864,
+    "show_id": 47204,
+    "name": "Tier 4",
+    "is_ada_seating": 0,
+    "priority_required": null,
+    "is_general_seating": 0,
+    "ga_capacity": null,
+    "max_order_seats": null,
+    "seat_color_id": 0,
+    "ticket_graphic_image_id_2": 7,
+    "ticket_color_2": null,
+    "ticket_corner_2": null
+  },
+  {
+    "price": 18,
+    "door_price": null,
+    "admin_user_id": 91,
+    "is_default": 1,
+    "date_start": null,
+    "date_end": null,
+    "date_door_pricing_start": null,
+    "max_capacity": null,
+    "is_hc": 0,
+    "ticket_graphic_image_id": null,
+    "ticket_color": null,
+    "ticket_corner": null,
+    "seat_low": null,
+    "seat_high": null,
+    "id": 32865,
+    "show_id": 47204,
+    "name": "Tier 5",
+    "is_ada_seating": 0,
+    "priority_required": null,
+    "is_general_seating": 0,
+    "ga_capacity": null,
+    "max_order_seats": null,
+    "seat_color_id": 0,
+    "ticket_graphic_image_id_2": 8,
+    "ticket_color_2": null,
+    "ticket_corner_2": null
+  }
+]
  
  
 function transformData(data) {
@@ -157,13 +157,13 @@ function transformData(data) {
     8: "purple"
   };
 
-  // Generate section_id array
+  // Generate sections array
   const sections = data.map(entry => ({
     name: entry.name,
-    seat_color_id: colorMap[entry.ticket_graphic_image_id_2] || "default"
+    seat_color_id: colorMap[entry.seat_color_id]
   }));
 
-  // Generate tier_id array with a single tier: "Online Price"
+  // Generate tiers array with a single tier: "Standard"
   const tiers = [
     {
       name: "Standard",
@@ -182,7 +182,9 @@ const {sections, tiers,} = transformData(data);
 const generateLegend = (sections, tiers, include_service_charge_on_ticket, sales_tax_id) => {
  
     // Determine if any ticket type has a description
-    const hasDescriptions = tiers.some(ticket => ticket.description);
+   const hasDescriptions = tiers.some(ticket =>
+  typeof ticket.description === "string" && ticket.description.trim() !== ""
+);
     
     // # of columns = tier columns + 1 ("Type") + 1 (if there are descriptions)
     let totalColumns = sections.length + 1;
@@ -259,14 +261,14 @@ const generateLegend = (sections, tiers, include_service_charge_on_ticket, sales
     if (!basePrice) {
       priceSpan.textContent = "—";
     } else {
-      if (include_service_charge_on_ticket === 1 && sales_tax_id === 0) {
-        priceSpan.textContent = `$${basePrice} Total`;
-      } else if (include_service_charge_on_ticket === 1 && sales_tax_id !== 0) {
-        priceSpan.textContent = `$${basePrice} Total + Tax`;
-      } else if (include_service_charge_on_ticket === 0 && sales_tax_id === 0) {
-        priceSpan.textContent = `$${basePrice} + Fee`;
-      } else {
-        priceSpan.textContent = `$${basePrice} + Fee + Tax`;
+      if (include_service_charge_on_ticket === 1 && sales_tax_id === 0) { // Total
+        priceSpan.textContent = `$${parseFloat(basePrice)} Total`;
+      } else if (include_service_charge_on_ticket === 1 && sales_tax_id !== 0) { // Total + Tax
+        priceSpan.textContent = `$${parseFloat(basePrice)} Total + Tax`;
+      } else if (include_service_charge_on_ticket === 0 && sales_tax_id === 0) { // + Fee
+        priceSpan.textContent = `$${parseFloat(basePrice)} + Fee`;
+      } else {  // + Fee + Tax
+        priceSpan.textContent = `$${parseFloat(basePrice)} + Fee + Tax`;
       }
     }
 
