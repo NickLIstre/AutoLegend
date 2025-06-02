@@ -9,8 +9,8 @@
   };
  
 //  // Multiple tiers with descriptions, + Fee
-//  const include_service_charge_on_ticket = 0; // Example value
-//  const sales_tax_id = 0; // Example value
+//  const includeFee = 0; // Example value
+//  const salesTax = 0; // Example value
 // const sections = [
 //   { name: "Premium", seat_color_id: "gold" },
 //   { name: "Standard", seat_color_id: "red" }
@@ -37,8 +37,8 @@
 
 
 //  // Multiple tiers without descriptions, + Fee + Tax
-// const include_service_charge_on_ticket = 0; // Example value
-// const sales_tax_id = 1; // Example value
+// const includeFee = 0; // Example value
+// const salesTax = 1; // Example value
 // const sections = [
 //   { name: "Premium", seat_color_id: "gold" },
 //   { name: "Standard", seat_color_id: "red" }
@@ -63,8 +63,8 @@
 
 
 //  // Single tier with descriptions, Total
-// const include_service_charge_on_ticket = 1; 
-// const sales_tax_id = 0; 
+// const includeFee = 1; 
+// const salesTax = 0; 
 // const sections = [
 //   { name: "Standard", seat_color_id: "red" }
 // ];
@@ -87,8 +87,8 @@
 // ];
 
 //  // 5 tiers with 5 types, Total + Tax
-// const include_service_charge_on_ticket = 1; 
-// const sales_tax_id = 1; 
+// const includeFee = 1; 
+// const salesTax = 1; 
 // const sections = [
 //   { name: "Orchestra", seat_color_id: "gold" },
 //   { name: "Mezzanine", seat_color_id: "orange" },
@@ -151,8 +151,8 @@
 // ];
 
  // Single tier without descriptions, + Fee + tax
-const include_service_charge_on_ticket = 0; 
-const sales_tax_id = 1; 
+const includeFee = 0; 
+const salesTax = 1; 
 const sections = [
   { name: "Standard", seat_color_id: "red" }
 ];
@@ -173,7 +173,7 @@ const tiers = [
 ];
 
 
-function generateLegend(sections, tiers, include_service_charge_on_ticket, sales_tax_id) {
+function generateLegend(sections, tiers, includeFee, salesTax) {
 
 // Determine if any ticket type has a description
 const hasDescriptions = tiers.some(ticket => ticket.description);
@@ -251,11 +251,11 @@ for (const ticket of tiers) {
     priceSpan.textContent = ticket.prices[tier.name];
     const basePrice = ticket.prices[tier.name];
     const formatted = `$${parseFloat(basePrice)}`;
-        if (include_service_charge_on_ticket === 1 && sales_tax_id === 0) {
+        if (includeFee === 1 && sales_tax_id == 0) {
           priceSpan.textContent = `${formatted} Total`;
-        } else if (include_service_charge_on_ticket === 1 && sales_tax_id === 1) {
+        } else if (includeFee === 1 && salesTax !== 0) {
           priceSpan.textContent = `${formatted} Total + Tax`;
-        } else if (include_service_charge_on_ticket === 0 && sales_tax_id === 0) {
+        } else if (includeFee === 0 && salesTax == 0) {
           priceSpan.textContent = `${formatted} + Fee`;
         } else {
           priceSpan.textContent = `${formatted} + Fee + Tax`;
@@ -278,7 +278,7 @@ async function loadLegendData(showId) {
 
     const {sections, tiers} = await response.json();
 
-    generateLegend(sections, tiers, include_service_charge_on_ticket, sales_tax_id);
+    generateLegend(sections, tiers, includeFee, salesTax);
   
   } catch (err) {
     console.error(err);
