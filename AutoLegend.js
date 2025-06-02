@@ -161,13 +161,13 @@
 //   {
 //     name: "Adult",
 //     prices: {
-//       Standard: "$18"
+//       Standard: "18"
 //     }
 //   },
 //   {
 //     name: "Senior",
 //     prices: {
-//       Standard: "$15"
+//       Standard: "15"
 //     }
 //   }
 // ];
