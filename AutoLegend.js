@@ -150,27 +150,27 @@
 //   }
 // ];
 
-//  // Single tier without descriptions, + Fee + tax
-// const include_service_charge_on_ticket = 0; 
-// const sales_tax_id = 1; 
-// const sections = [
-//   { name: "Standard", seat_color_id: "red" }
-// ];
+ // Single tier without descriptions, + Fee + tax
+const include_service_charge_on_ticket = 0; 
+const sales_tax_id = 1; 
+const sections = [
+  { name: "Standard", seat_color_id: "red" }
+];
 
-// const tiers = [
-//   {
-//     name: "Adult",
-//     prices: {
-//       Standard: "18"
-//     }
-//   },
-//   {
-//     name: "Senior",
-//     prices: {
-//       Standard: "15"
-//     }
-//   }
-// ];
+const tiers = [
+  {
+    name: "Adult",
+    prices: {
+      Standard: "18"
+    }
+  },
+  {
+    name: "Senior",
+    prices: {
+      Standard: "15"
+    }
+  }
+];
 
 
 function generateLegend(sections, tiers, include_service_charge_on_ticket, sales_tax_id) {
@@ -213,7 +213,7 @@ const singleTier = sections.length === 1;
 for (const tier of sections) {
   const tierHeader = document.createElement('span');
   tierHeader.style.width = columnWidth;
-  if (tier.seat_color_id) {
+  if (sections.length > 1) {
     tierHeader.setAttribute(tier.seat_color_id, "");
   }
   tierHeader.textContent = singleTier ? "Online Price" : tier.name;
