@@ -1,77 +1,95 @@
- // Multiple tiers with descriptions
-const section_id = [
-  { name: "Premium", seat_color_id: "gold" },
-  { name: "Standard", seat_color_id: "red" }
-];
-
-const tier_id = [
-  {
-    name: "Adult",
-    description: "Ages 18+",
-    prices: {
-      Premium: "$30 + Fee + Tax",
-      Standard: "$25 + Fee + Tax"
-    }
-  },
-  {
-    name: "Child",
-    description: "Ages 3–17",
-    prices: {
-      Premium: "$20 + Fee + Tax",
-      Standard: "$15 + Fee + Tax"
-    }
-  }
-];
-
-
-//  // Multiple tiers without descriptions
-// const section_id = [
+ const colorMap = {
+    0: "red",
+    3: "gold",
+    4: "yellow",
+    2: "orange",
+    5: "silver",
+    7: "green",
+    8: "purple"
+  };
+ 
+//  // Multiple tiers with descriptions, + Fee
+//  const include_service_charge_on_ticket = 0; // Example value
+//  const sales_tax_id = 0; // Example value
+// const sections = [
 //   { name: "Premium", seat_color_id: "gold" },
 //   { name: "Standard", seat_color_id: "red" }
 // ];
 
-// const tier_id = [
+// const tiers = [
 //   {
 //     name: "Adult",
+//     description: "Ages 18+",
 //     prices: {
-//       Premium: "$40",
-//       Standard: "$30"
+//       Premium: "30",
+//       Standard: "25"
 //     }
 //   },
 //   {
-//     name: "Senior",
+//     name: "Child",
+//     description: "Ages 3–17",
 //     prices: {
-//       Premium: "$35",
-//       Standard: "$25"
+//       Premium: "20",
+//       Standard: "15"
 //     }
 //   }
 // ];
 
 
-//  // Single tier with descriptions
-// const section_id = [
+//  // Multiple tiers without descriptions, + Fee + Tax
+// const include_service_charge_on_ticket = 0; // Example value
+// const sales_tax_id = 1; // Example value
+// const sections = [
+//   { name: "Premium", seat_color_id: "gold" },
 //   { name: "Standard", seat_color_id: "red" }
 // ];
 
-// const tier_id = [
+// const tiers = [
+//   {
+//     name: "Adult",
+//     prices: {
+//       Premium: "40",
+//       Standard: "30"
+//     }
+//   },
+//   {
+//     name: "Senior",
+//     prices: {
+//       Premium: "35",
+//       Standard: "25"
+//     }
+//   }
+// ];
+
+
+//  // Single tier with descriptions, Total
+// const include_service_charge_on_ticket = 1; 
+// const sales_tax_id = 0; 
+// const sections = [
+//   { name: "Standard", seat_color_id: "red" }
+// ];
+
+// const tiers = [
 //   {
 //     name: "Adult",
 //     description: "Ages 19 and Older",
 //     prices: {
-//       "Standard": "$22 + Fee"
+//       "Standard": "22"
 //     }
 //   },
 //   {
 //     name: "Child",
 //     description: "Ages 3 to 18",
 //     prices: {
-//       "Standard": "$15 + Fee"
+//       "Standard": "15"
 //     }
 //   }
 // ];
 
-//  // 5 tiers with 5 types
-// const section_id = [
+//  // 5 tiers with 5 types, Total + Tax
+// const include_service_charge_on_ticket = 1; 
+// const sales_tax_id = 1; 
+// const sections = [
 //   { name: "Orchestra", seat_color_id: "gold" },
 //   { name: "Mezzanine", seat_color_id: "orange" },
 //   { name: "Balcony", seat_color_id: "yellow" },
@@ -79,65 +97,67 @@ const tier_id = [
 //   { name: "Gallery", seat_color_id: "red" }
 // ];
 
-// const tier_id = [
+// const tiers = [
 //   {
 //     name: "Adult",
 //     prices: {
-//       Orchestra: "$50",
-//       Mezzanine: "$40",
-//       Balcony: "$30",
-//       Box: "$60",
-//       Gallery: "$25"
+//       Orchestra: "50",
+//       Mezzanine: "40",
+//       Balcony: "30",
+//       Box: "60",
+//       Gallery: "25"
 //     }
 //   },
 //   {
 //     name: "Senior",
 //     prices: {
-//       Orchestra: "$45",
-//       Mezzanine: "$35",
-//       Balcony: "$25",
-//       Box: "$55",
-//       Gallery: "$20"
+//       Orchestra: "45",
+//       Mezzanine: "35",
+//       Balcony: "25",
+//       Box: "55",
+//       Gallery: "20"
 //     }
 //   },
 //   {
 //     name: "Student",
 //     prices: {
-//       Orchestra: "$40",
-//       Mezzanine: "$30",
-//       Balcony: "$20",
-//       Box: "$50",
-//       Gallery: "$15"
+//       Orchestra: "40",
+//       Mezzanine: "30",
+//       Balcony: "20",
+//       Box: "50",
+//       Gallery: "15"
 //     }
 //   },
 //   {
 //     name: "Child",
 //     prices: {
-//       Orchestra: "$35",
-//       Mezzanine: "$25",
-//       Balcony: "$15",
-//       Box: "$45",
-//       Gallery: "$10"
+//       Orchestra: "35",
+//       Mezzanine: "25",
+//       Balcony: "15",
+//       Box: "45",
+//       Gallery: "10"
 //     }
 //   },
 //   {
 //     name: "Military",
 //     prices: {
-//       Orchestra: "$42",
-//       Mezzanine: "$32",
-//       Balcony: "$22",
-//       Box: "$52",
-//       Gallery: "$18"
+//       Orchestra: "42",
+//       Mezzanine: "32",
+//       Balcony: "22",
+//       Box: "52",
+//       Gallery: "18"
 //     }
 //   }
 // ];
 
-//  // Single tier without descriptions
-// const section_id = [
+//  // Single tier without descriptions, + Fee + tax
+// const include_service_charge_on_ticket = 0; 
+// const sales_tax_id = 1; 
+// const sections = [
 //   { name: "Standard", seat_color_id: "red" }
 // ];
 
-// const tier_id = [
+// const tiers = [
 //   {
 //     name: "Adult",
 //     prices: {
@@ -153,14 +173,13 @@ const tier_id = [
 // ];
 
 
-
-function generateLegend(section_id, tier_id) {
+function generateLegend(sections, tiers, include_service_charge_on_ticket, sales_tax_id) {
 
 // Determine if any ticket type has a description
-const hasDescriptions = tier_id.some(ticket => ticket.description);
+const hasDescriptions = tiers.some(ticket => ticket.description);
 
 // # of columns = tier columns + 1 ("Type") + 1 (if there are descriptions)
-let totalColumns = section_id.length + 1;
+let totalColumns = sections.length + 1;
 if (hasDescriptions) totalColumns += 1;
 
 const columnWidth = (100 / totalColumns) + "%";
@@ -189,9 +208,9 @@ if (hasDescriptions) {
 }
 
 // Add columns
-const singleTier = section_id.length === 1;
+const singleTier = sections.length === 1;
 
-for (const tier of section_id) {
+for (const tier of sections) {
   const tierHeader = document.createElement('span');
   tierHeader.style.width = columnWidth;
   if (tier.seat_color_id) {
@@ -207,7 +226,7 @@ legendEl.appendChild(headerRow);
 const bodyContainer = document.createElement('div');
 bodyContainer.className = 'alternating';
 
-for (const ticket of tier_id) {
+for (const ticket of tiers) {
   const row = document.createElement('div');
   row.setAttribute('rel', 'body');
 
@@ -226,10 +245,21 @@ for (const ticket of tier_id) {
   }
 
   // Add price for each tier
-  for (const tier of section_id) {
+  for (const tier of sections) {
     const priceSpan = document.createElement('span');
     priceSpan.style.width = columnWidth;
-    priceSpan.textContent = ticket.prices[tier.name] || "—";
+    priceSpan.textContent = ticket.prices[tier.name];
+    const basePrice = ticket.prices[tier.name];
+    const formatted = `$${parseFloat(basePrice)}`;
+        if (include_service_charge_on_ticket === 1 && sales_tax_id === 0) {
+          priceSpan.textContent = `${formatted} Total`;
+        } else if (include_service_charge_on_ticket === 1 && sales_tax_id === 1) {
+          priceSpan.textContent = `${formatted} Total + Tax`;
+        } else if (include_service_charge_on_ticket === 0 && sales_tax_id === 0) {
+          priceSpan.textContent = `${formatted} + Fee`;
+        } else {
+          priceSpan.textContent = `${formatted} + Fee + Tax`;
+        }
     row.appendChild(priceSpan);
   }
 
@@ -246,9 +276,9 @@ async function loadLegendData(showId) {
     const response = await fetch(`/api/show/${showId}/tickets`);
     if (!response.ok) throw new Error("Failed to load ticket data");
 
-    const { section_id, tier_id } = await response.json();
+    const {sections, tiers} = await response.json();
 
-    generateLegend(section_id, tier_id);
+    generateLegend(sections, tiers, include_service_charge_on_ticket, sales_tax_id);
   
   } catch (err) {
     console.error(err);
