@@ -1,67 +1,72 @@
-// // Test Cases
-// // Test Case 1: 5 Tiers, 0 Types, Total
-// const data = [
-//   {
-//     "price": 26,
-//     "door_price": null,
-//     "id": 32861,
-//     "show_id": 47204,
-//     "section_name": "Tier 1",
-//     "seat_color_id": 3,
-//     "ticket_name": null,
-//     "description": null,
-//     "include_service_charge_on_ticket": 1,
-//     "sales_tax_id": 0
-//   },
-//   {
-//     "price": 24,
-//     "door_price": null,
-//     "id": 32862,
-//     "show_id": 47204,
-//     "section_name": "Tier 2",
-//     "seat_color_id": 4,
-//     "ticket_name": null,
-//     "description": null,
-//     "include_service_charge_on_ticket": 1,
-//     "sales_tax_id": 0
-//   },
-//   {
-//     "price": 22,
-//     "door_price": null,
-//     "id": 32863,
-//     "show_id": 47204,
-//     "section_name": "Tier 3",
-//     "seat_color_id": 8,
-//     "ticket_name": null,
-//     "description": null,
-//     "include_service_charge_on_ticket": 1,
-//     "sales_tax_id": 0
-//   },
-//   {
-//     "price": 20,
-//     "door_price": null,
-//     "id": 32864,
-//     "show_id": 47204,
-//     "section_name": "Tier 4",
-//     "seat_color_id": 7,
-//     "ticket_name": null,
-//     "description": null,
-//     "include_service_charge_on_ticket": 1,
-//     "sales_tax_id": 0
-//   },
-//   {
-//     "price": 18,
-//     "door_price": null,
-//     "id": 32865,
-//     "show_id": 47204,
-//     "section_name": "Tier 5",
-//     "seat_color_id": 0,
-//     "ticket_name": null,
-//     "description": null,
-//     "include_service_charge_on_ticket": 1,
-//     "sales_tax_id": 0
-//   }
-// ]
+// Test Cases
+// Test Case 1: 5 Tiers, 0 Types, Total
+const data = [
+  {
+    price: 26,
+    door_price: null,
+    id: 32861,
+    show_id: 47204,
+    section_name: "Tier 1",
+    seat_color_id: 3,
+    ticket_name: null,
+    description: null,
+    service_charge: 2,
+    include_service_charge_on_ticket: 1,
+    sales_tax_id: 0
+  },
+  {
+    price: 24,
+    door_price: null,
+    id: 32862,
+    show_id: 47204,
+    section_name: "Tier 2",
+    seat_color_id: 4,
+    ticket_name: null,
+    description: null,
+    service_charge: 2,
+    include_service_charge_on_ticket: 1,
+    sales_tax_id: 0
+  },
+  {
+    price: 22,
+    door_price: null,
+    id: 32863,
+    show_id: 47204,
+    section_name: "Tier 3",
+    seat_color_id: 8,
+    ticket_name: null,
+    description: null,
+    service_charge: 2,
+    include_service_charge_on_ticket: 1,
+    sales_tax_id: 0
+  },
+  {
+    price: 20,
+    door_price: null,
+    id: 32864,
+    show_id: 47204,
+    section_name: "Tier 4",
+    seat_color_id: 7,
+    ticket_name: null,
+    description: null,
+    service_charge: 2,
+    include_service_charge_on_ticket: 1,
+    sales_tax_id: 0
+  },
+  {
+    price: 18,
+    door_price: null,
+    id: 32865,
+    show_id: 47204,
+    section_name: "Tier 5",
+    seat_color_id: 0,
+    ticket_name: null,
+    description: null,
+    service_charge: 2,
+    include_service_charge_on_ticket: 1,
+    sales_tax_id: 0
+  }
+]
 
 // // Test Case 2: 2 Tiers, 2 Types, Descriptions, Total
 // const data = [
@@ -74,6 +79,7 @@
 //     seat_color_id: 3,
 //     ticket_name: "Adult",
 //     description: "Ages 18+",
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 1,
 //     sales_tax_id: 0
 //   },
@@ -86,6 +92,7 @@
 //     seat_color_id: 3,
 //     ticket_name: "Child",
 //     description: "Ages 3-17",
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 1,
 //     sales_tax_id: 0
 //   },
@@ -98,6 +105,7 @@
 //     seat_color_id: 4,
 //     ticket_name: "Adult",
 //     description: "Ages 18+",
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 1,
 //     sales_tax_id: 0
 //   },
@@ -110,6 +118,7 @@
 //     seat_color_id: 4,
 //     ticket_name: "Child",
 //     description: "Ages 3-17",
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 1,
 //     sales_tax_id: 0
 //   }
@@ -126,6 +135,7 @@
 //     seat_color_id: 5,
 //     ticket_name: "Standard",
 //     description: null,
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 0,
 //     sales_tax_id: 1
 //   },
@@ -138,6 +148,7 @@
 //     seat_color_id: 5,
 //     ticket_name: "Senior",
 //     description: null,
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 0,
 //     sales_tax_id: 1
 //   },
@@ -150,6 +161,7 @@
 //     seat_color_id: 5,
 //     ticket_name: "Student",
 //     description: null,
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 0,
 //     sales_tax_id: 1
 //   },
@@ -162,6 +174,7 @@
 //     seat_color_id: 7,
 //     ticket_name: "Standard",
 //     description: null,
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 0,
 //     sales_tax_id: 1
 //   },
@@ -174,6 +187,7 @@
 //     seat_color_id: 7,
 //     ticket_name: "Senior",
 //     description: null,
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 0,
 //     sales_tax_id: 1
 //   },
@@ -186,6 +200,7 @@
 //     seat_color_id: 7,
 //     ticket_name: "Student",
 //     description: null,
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 0,
 //     sales_tax_id: 1
 //   },
@@ -198,6 +213,7 @@
 //     seat_color_id: 8,
 //     ticket_name: "Standard",
 //     description: null,
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 0,
 //     sales_tax_id: 1
 //   },
@@ -210,6 +226,7 @@
 //     seat_color_id: 8,
 //     ticket_name: "Senior",
 //     description: null,
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 0,
 //     sales_tax_id: 1
 //   },
@@ -222,6 +239,7 @@
 //     seat_color_id: 8,
 //     ticket_name: "Student",
 //     description: null,
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 0,
 //     sales_tax_id: 1
 //   }
@@ -238,6 +256,7 @@
 //     seat_color_id: 3,
 //     ticket_name: "Adult",
 //     description: "Ages 18+",
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 1,
 //     sales_tax_id: 0
 //   },
@@ -250,6 +269,7 @@
 //     seat_color_id: 3,
 //     ticket_name: "Child",
 //     description: "Ages 3-17",
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 1,
 //     sales_tax_id: 0
 //   }
@@ -266,6 +286,7 @@
 //     seat_color_id: 4,
 //     ticket_name: "Adult",
 //     description: "Ages 18+",
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 0,
 //     sales_tax_id: 1
 //   },
@@ -278,6 +299,7 @@
 //     seat_color_id: 4,
 //     ticket_name: "Senior",
 //     description: "Ages 65+",
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 0,
 //     sales_tax_id: 1
 //   },
@@ -290,6 +312,7 @@
 //     seat_color_id: 4,
 //     ticket_name: "Child",
 //     description: "Ages 3-17",
+//     service_charge: 2,
 //     include_service_charge_on_ticket: 0,
 //     sales_tax_id: 1
 //   }
@@ -306,6 +329,7 @@
 //     seat_color_id: 7,
 //     ticket_name: null,
 //     description: null,
+//     service_charge: 1.15,
 //     include_service_charge_on_ticket: 1,
 //     sales_tax_id: 0
 //   },
@@ -318,6 +342,7 @@
 //     seat_color_id: 8,
 //     ticket_name: null,
 //     description: null,
+//     service_charge: 1.15,
 //     include_service_charge_on_ticket: 1,
 //     sales_tax_id: 0
 //   }
@@ -334,6 +359,7 @@
 //     seat_color_id: 0,
 //     ticket_name: null,
 //     description: null,
+//     service_charge: 1.15,
 //     include_service_charge_on_ticket: 0,
 //     sales_tax_id: 0
 //   }
@@ -369,18 +395,19 @@ function transformData(data) {
   // Group by ticket type (type_name or fallback)
   const ticketGroups = {};
 
-  data.forEach(entry => {
-    const key = entry.ticket_name || null;
-    if (!ticketGroups[key]) {
-      ticketGroups[key] = {
-        name: key,
-        description: entry.description || null,
-        prices: {}
-      };
-    }
-
-    ticketGroups[key].prices[entry.section_name] = entry.price;
-  });
+data.forEach(entry => {
+  const key = entry.ticket_name || null;
+  if (!ticketGroups[key]) {
+    ticketGroups[key] = {
+      name: key,
+      description: entry.description || null,
+      prices: {},
+      service_charges: {}
+    };
+  }
+  ticketGroups[key].prices[entry.section_name] = entry.price;
+  ticketGroups[key].service_charges[entry.section_name] = entry.service_charge || 0;
+});
 
   const tiers = Object.values(ticketGroups);
 
@@ -468,24 +495,28 @@ for (const ticket of tiers) {
   }
 
   // Add price for each tier
-  for (const tier of sections) {
-    const priceSpan = document.createElement('span');
-    priceSpan.style.width = columnWidth;
-    priceSpan.textContent = ticket.prices[tier.name];
-    const basePrice = ticket.prices[tier.name];
-    const formatted = `$${parseFloat(basePrice)}`;
-        if (includeFee === 1 && salesTax == 0) {
-          priceSpan.textContent = `${formatted} Total`;
-        } else if (includeFee === 1 && salesTax !== 0) {
-          priceSpan.textContent = `${formatted} Total + Tax`;
-        } else if (includeFee === 0 && salesTax == 0) {
-          priceSpan.textContent = `${formatted} + Fee`;
-        } else {
-          priceSpan.textContent = `${formatted} + Fee + Tax`;
-        }
-    row.appendChild(priceSpan);
+for (const tier of sections) {
+  const priceSpan = document.createElement('span');
+  priceSpan.style.width = columnWidth;
+  const basePrice = ticket.prices[tier.name];
+  const serviceCharge = ticket.service_charges ? ticket.service_charges[tier.name] || 0 : 0;
+  let formatted = `$${parseFloat(basePrice)}`;
+  if (includeFee === 1 && salesTax == 0) {
+    // Show basePrice + service_charge
+    const total = parseFloat(basePrice) + parseFloat(serviceCharge);
+    formatted = Number.isInteger(total) ? `$${total}` : `$${total.toFixed(2)}`;
+    priceSpan.textContent = `${formatted} Total`;
+  } else if (includeFee === 1 && salesTax !== 0) {
+    const total = parseFloat(basePrice) + parseFloat(serviceCharge);
+    formatted = Number.isInteger(total) ? `$${total}` : `$${total.toFixed(2)}`;
+    priceSpan.textContent = `${formatted} Total + Tax`;
+  } else if (includeFee === 0 && salesTax == 0) {
+    priceSpan.textContent = `${formatted} + Fee`;
+  } else {
+    priceSpan.textContent = `${formatted} + Fee + Tax`;
   }
-
+  row.appendChild(priceSpan);
+}
   bodyContainer.appendChild(row);
 }
 
@@ -512,3 +543,5 @@ const { sections, tiers, includeFee, salesTax } = transformData(data);
 
 const { sections, tiers, includeFee, salesTax } = transformData(data);
 generateLegend(sections, tiers, includeFee, salesTax);
+// If you want to load data dynamically, uncomment the line below and provide a valid showId
+// loadLegendData(showId); // Replace with actual showId
